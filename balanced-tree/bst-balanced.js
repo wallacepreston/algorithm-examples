@@ -8,7 +8,6 @@ class BinaryNode {
 class BinarySearchTree {
   // BinarySearchTree constructor function
   constructor (val) {
-    // your code here
     this.value = val;
     this.left = null;
     this.right = null;
@@ -16,7 +15,6 @@ class BinarySearchTree {
 
   // BinarySearchTree.prototype.insert
   insert (val) {
-    // your code here
     let direction
     if(val < this.value){
       direction = 'left';
@@ -35,7 +33,6 @@ class BinarySearchTree {
 
   // BinarySearchTree.prototype.min
   min () {
-    // your code here
     // THIS IS TAIL RECURSION
     if (this.left === null){
       return this.value;
@@ -47,7 +44,6 @@ class BinarySearchTree {
 
   // BinarySearchTree.prototype.max
   max () {
-    // your code here
     // THIS IS TAIL RECURSION
     if (this.right === null){
       return this.value;
@@ -59,7 +55,6 @@ class BinarySearchTree {
 
   // BinarySearchTree.prototype.contains
   contains (val) {
-    // your code here
     let direction
     if (this.value === val){
       return true;
@@ -108,19 +103,16 @@ const isBalanced = (root) => {
 }
 
 const bstImbalanced = new BinarySearchTree(5);
-bstImbalanced.insert(6);
-bstImbalanced.insert(7);
-bstImbalanced.insert(8);
-bstImbalanced.insert(9);
-bstImbalanced.insert(5);
 bstImbalanced.insert(2);
-bstImbalanced.insert(3);
-bstImbalanced.insert(3);
-bstImbalanced.insert(3);
-bstImbalanced.insert(3);
-bstImbalanced.insert(3);
-bstImbalanced.insert(3);
-bstImbalanced.insert(3);
+bstImbalanced.insert(1);
+bstImbalanced.insert(1);
+bstImbalanced.insert(1);
+bstImbalanced.insert(1);
+bstImbalanced.insert(6);
+bstImbalanced.insert(6);
+bstImbalanced.insert(6);
+bstImbalanced.insert(5);
+
 
 const bstBalanced = new BinarySearchTree(5);
 bstBalanced.insert(6);
@@ -129,4 +121,4 @@ bstBalanced.insert(7);
 bstBalanced.insert(3);
 
 
-console.log(isBalanced(bstBalanced));
+console.log(isBalanced(bstImbalanced));
